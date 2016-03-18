@@ -50,7 +50,7 @@ module.exports = function(options) {
   var extensions = ['', '.web.js', '.js', '.jsx'];
   var root = path.join(__dirname, 'src');
   var publicPath = options.devServer ?
-    'http://localhost:8480/_assets/' :
+    'http://localhost:8580/_assets/' :
     '/cloud/_assets/';
   var output = {
     path: path.join(__dirname, 'build', 'public'),

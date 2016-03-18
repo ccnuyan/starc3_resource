@@ -24200,3 +24200,12 @@ TRACE: 2016-03-18T02:59:43Z
 DEBUG: 2016-03-18T02:59:43Z
   Request complete
 
+INFO: 2016-03-18T07:46:42Z
+  Adding connection to http://119.97.166.135:9200/
+
+INFO: 2016-03-18T07:47:57Z
+  Adding connection to http://119.97.166.135:9200/
+
+INFO: 2016-03-18T07:50:25Z
+  Adding connection to http://119.97.166.135:9200/
+

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run hot-dev-web-server & npm run start-web-dev & npm run start-api-dev &",
     "itaobao": "npm install --registry=https://registry.npm.taobao.org/",
-    "hot-web-server": "webpack-dev-server --config ./web/webpack/webpack-hot-dev-server.config.js --hot --progress --colors --port 8480 --inline",
+    "hot-web-server": "webpack-dev-server --config ./web/webpack/webpack-hot-dev-server.config.js --hot --progress --colors --port 8580 --inline",
     "start-web-dev": "node ./web/lib/server-development",
     "build-web": "webpack --config ./web//webpack/webpack-production.config.js --progress --profile --colors",
     "start-web": "node ./web/lib/server-production",
