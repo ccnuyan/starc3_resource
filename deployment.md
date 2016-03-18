@@ -12,12 +12,12 @@
 ### web
     docker rm -f resource-web
     docker build -t resource-web:0.0.1 -f Dockerfile.web .
-    docker run -d -p 8500:8500 --name resource-web resource-web:0.0.1
+    docker run -d -p 8500:8500 -v /root/source:/etc/source --name resource-web resource-web:0.0.1
     docker logs -f resource-web
 ### api
     docker rm -f resource-api
     docker build -t resource-api:0.0.1 -f Dockerfile.api .
-    docker run -d -p 3500:3500 --name resource-api resource-api:0.0.1
+    docker run -d -p 3500:3500 -v /root/source:/etc/source --name resource-api resource-api:0.0.1
     docker logs -f resource-api
 ### nginx
     server {

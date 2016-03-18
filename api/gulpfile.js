@@ -11,7 +11,7 @@ var User = require('./src/users/model');
 // Set NODE_ENV to 'dev'
 gulp.task('env:dev', function() {
   process.env.NODE_ENV = 'development';
-  process.env.PORT = '3400';
+  process.env.PORT = '3500';
 });
 
 // Nodemon task
