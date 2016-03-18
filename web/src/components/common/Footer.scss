@@ -1,0 +1,29 @@
+@import '../../variables';
+.footer {
+  height: $footer-height;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #777;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.footer a {
+  color: #fff;
+}
+.footerCopyrightBlock {
+  font-size: 80%;
+  margin-top: 10px 0 0 0;
+}
+.footerSocialBlock img {
+  margin: 2px;
+}
+@media only screen and (min-width:700px) {
+  .footer {
+    text-align: left;
+  }
+  .footerCopyrightBlock {
+    float: right;
+  }
+}

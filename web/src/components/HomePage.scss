@@ -1,0 +1,40 @@
+$search-input-height: 50px;
+.home {
+  height: 100%;
+}
+.home a {
+  font-size: 120%;
+  padding: 10px 20px;
+  color: inherit;
+}
+.backgroundBlockHome {
+  padding: 20px;
+  height: 100%;
+}
+.infoBlock {
+  position: relative;
+  z-index: 1;
+}
+.homeHeading {
+  padding: 20px 0;
+  font-weight: 300;
+  font-size: 300%;
+}
+.subHeading {
+  opacity: 0.8;
+  font-size: 80%;
+}
+.searchInput {
+  width: 60%;
+  min-width: 400px;
+  height: $search-input-height;
+}
+
+.searchButton {
+  width: 80px;
+  height: $search-input-height;
+}
+
+.subjectButton{
+  margin: 5px;
+}

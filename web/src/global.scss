@@ -1,0 +1,142 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  overflow: hidden;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+#root {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+body, input, select, button {
+  font-size: 16px;
+  color: #222;
+}
+button {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+/*-------------------------------------*/
+/* GLOBAL STYLES */
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+sub, sup {
+  font-size: 65%;
+  position: relative;
+  line-height: 0;
+}
+
+sup {
+  top: -8px;
+}
+
+sub {
+  bottom: -8px;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+h6 {
+  font-size: 110%;
+}
+
+h5 {
+  font-size: 120%;
+}
+
+h4 {
+  font-size: 130%;
+}
+
+h3 {
+  font-size: 140%;
+}
+
+h2 {
+  font-size: 160%;
+}
+
+h1 {
+  font-size: 180%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0 0 15px 0;
+}
+
+ol, ul  {
+  padding-left:20px;
+  list-style-position: inside;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+input[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+input[type="submit"], button {
+  cursor: pointer;
+}
+
+textarea {
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid;
+  padding: 20px;
+}
+
+th {
+  font-weight: 700;
+}
+/*media queries*/
+@media only screen and (min-width:1200px) {}
+@media only screen and (min-width:900px) {}
+@media only screen and (min-width:700px) {}
+@media only screen and (min-width:600px) {}

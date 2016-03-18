@@ -1,0 +1,185 @@
+@import '../../variables';
+@import '../../helpers';
+.optionsGrid {
+  width: 100%;
+}
+.directoryListGrid {
+  float: left;
+  width: 50%;
+}
+.fileListGrid {
+  float: right;
+  width: 50%;
+}
+@media only screen and (max-width: 700px) {
+  .directoryListGrid {
+    float: none;
+    width: 100%;
+  }
+  .fileListGrid {
+    float: none;
+    width: 100%;
+  }
+}
+.item {
+  height: 46px;
+  margin: 10px 0;
+  position: relative;
+  cursor: pointer;
+  font-size: 90%;
+}
+.options {
+  width: 100%;
+  display: inline-block;
+}
+.optionButton {
+  float: right;
+}
+//direcotry
+.directoryOptions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  color: $defaultColor;
+}
+.directory {
+  @extend .item;
+}
+.directory>div {
+  position: absolute;
+}
+.directoryInputDiv {
+  width: 100%;
+}
+.directoryName {
+  padding: 12px;
+  color: #fff;
+  height: inherit;
+  width: 100%;
+  background: $defaultColor;
+}
+.directoryName>i {
+  @extend .vertical-center;
+  margin-right: 12px;
+}
+.directoryName>span {
+  @extend .vertical-center;
+  left:32px;
+}
+.directoryInput {
+  width: 100%;
+  margin: 0;
+}
+.directoryName:hover {
+  background: $defaultDark;
+  transition: background 500ms;
+}
+.directory:active {
+  background: $defaultLight;
+  transition: background 0s;
+}
+.subItemsTag {
+  top: 50%;
+  right: 30px;
+  font-size: 80%;
+  color: #fff;
+  background: $defaultColor;
+}
+// file
+.fileOptions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  color: $defaultColor;
+}
+.file {
+  @extend .item;
+}
+.file>div {
+  display: inline-block;
+  position: absolute;
+}
+.fileInputDiv {
+  width: 100%;
+}
+.fileName {
+  padding: 10px;
+  color: $defaultColor;
+  height: inherit;
+  width: 100%;
+  background: #fff;
+  border: 2px solid;
+}
+.fileName>i {
+  @extend .vertical-center;
+  margin-right: 12px;
+}
+.fileName>span {
+  @extend .vertical-center;
+  left:32px;
+}
+.fileInput {
+  width: 100%;
+  margin: 0;
+}
+.fileName:hover {
+  color: $primaryColor;
+  transition: background 500ms;
+}
+.file:active {
+  background: $defaultLight;
+  transition: background 0s;
+}
+.emptyWarning {
+  @extend .item;
+  color: $errorColor;
+  padding: 0;
+}
+.itemButton {
+  width: 46px;
+  height: 46px;
+  padding: 0;
+}
+.uploader {
+  position: relative;
+}
+.uploader input {
+  position: relative;
+  display: block !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  // width: 46px !important;
+  // height: 46px !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+}
+.uploader input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.movingOverlay {
+  position: fixed;
+  opacity: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 2;
+}
+.editModeSwitcher {
+  margin: 15px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}

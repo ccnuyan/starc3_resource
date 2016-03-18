@@ -1,0 +1,5 @@
+FROM node:5-copy-onbuild
+ENV NODE_ENV=production
+RUN chmod 755 ./api.sh
+EXPOSE 3500
+ENTRYPOINT ["./api.sh"]

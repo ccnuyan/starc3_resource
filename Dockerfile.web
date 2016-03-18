@@ -1,0 +1,5 @@
+FROM node:5-copy-onbuild
+ENV NODE_ENV=production
+RUN chmod 755 ./web.sh
+EXPOSE 8500
+ENTRYPOINT ["./web.sh"]

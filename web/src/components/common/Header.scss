@@ -1,0 +1,31 @@
+@import '../../variables';
+.header {
+  height: $header-height;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #555;
+  color: #fff;
+}
+.header a {
+  color: inherit;
+}
+.logo {
+  display: block;
+}
+.logoBlock {
+  float: left
+}
+
+.navBlock {
+  padding:10px 0 0 0;
+  float: right;
+  vertical-align: bottom;
+}
+.nav li, .nav li a {
+  display: inline-block;
+}
+.nav li a {
+  padding: 0 10px;
+}

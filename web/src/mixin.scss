@@ -1,0 +1,5 @@
+@mixin transition-all($duration) {
+  transition:all $duration;
+  -moz-transition:all $duration; /* Firefox 4 */
+  -webkit-transition:all $duration; /* Safari and Chrome */
+}

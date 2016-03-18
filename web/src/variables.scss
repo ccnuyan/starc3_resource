@@ -1,0 +1,45 @@
+$user-module-width: 400px;
+$header-height: 60px;
+$footer-height: 22px;
+$page-margin-bottom: 35px;
+
+$primaryColor: #3b5998;
+$primaryLight: #5b79b8;
+$primaryDark: #1b3978;
+
+$secondaryColor: #3b5998;
+$secondaryLight: #5b79b8;
+$secondaryDark: #1b3978;
+
+$defaultColor: #555;
+$defaultLight: #aaa;
+$defaultDark: #333;
+
+$successColor: #34945F;
+$successLight: #55b57f;
+$successDark: #14743f;
+
+$errorColor: #aF3638;
+$errorLight: #cf5658;
+$errorDark: #9f1618;
+
+
+.pageContainer {
+  position: relative;
+  margin-bottom: $page-margin-bottom;
+}
+.primaryHeading {
+  font-weight: 300;
+  font-size: 200%;
+  margin-top: 30px;
+}
+.secondaryHeading {
+  text-align: left;
+  font-weight: 300;
+  margin-top: 50px;
+  border-bottom: 1px solid;
+}
+
+.registerContainer {
+  margin-top: 30px;
+}
