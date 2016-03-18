@@ -2,9 +2,10 @@ csv 2 json
 
 https://atom.io/packages/json-converter
 
-cd api/db-scripts/
+cd api/db-scripts/resources
 
 mongo --host $MONGO_HOST -u $MONGO_USER -p $MONGO_PASS starc3_dev
+mongo --host $MONGO_PROD_HOST -u $MONGO_PROD_USER -p $MONGO_PROD_PASS starc3
 
 # 导入到生产环境
 
