@@ -51,7 +51,7 @@ module.exports = function(options) {
   var root = path.join(__dirname, 'src');
   var publicPath = options.devServer ?
     'http://localhost:8580/_assets/' :
-    '/cloud/_assets/';
+    '/resource/_assets/';
   var output = {
     path: path.join(__dirname, 'build', 'public'),
     publicPath: publicPath,
