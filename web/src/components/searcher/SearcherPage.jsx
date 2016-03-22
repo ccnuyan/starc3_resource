@@ -16,6 +16,7 @@ class SearcherPage extends React.Component {
     this.goSearch = this.goSearch.bind(this);
     this.setSubjectActive = this.setSubjectActive.bind(this);
     this.setSubjectAll = this.setSubjectAll.bind(this);
+    this.goSearchKnowledgeNode = this.goSearchKnowledgeNode.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +24,14 @@ class SearcherPage extends React.Component {
       var subject = this.props.routeParams.subject;
       this.props.dispatch(seacherActions.onSetSubjectActive(subject));
     }
+  }
+
+  goSearchKnowledgeNode(id) {
+
+    var knowledgeNodeId = id;
+    seacherActions.dispatchSearchKnowledgeNodeResourcesAsync(knowledgeNodeId)(this.props.dispatch, function() {
+      return this.props.searcher;
+    }.bind(this));
   }
 
   goSearch() {
@@ -116,7 +125,7 @@ class SearcherPage extends React.Component {
             </button>
           </div>
           <div>
-            <KnowledgeNodeList></KnowledgeNodeList>
+            <KnowledgeNodeList onKnowledgeSearch={this.goSearchKnowledgeNode}></KnowledgeNodeList>
             <ResourceList></ResourceList>
           </div>
         </div>

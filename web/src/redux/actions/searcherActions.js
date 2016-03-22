@@ -26,6 +26,21 @@ function onSetSubjectAll() {
   };
 }
 
+//onSetSubjectActive
+function onSetKnowledgeNodeActive(key) {
+  return {
+    type: actionTypes.KNOWLEDGENODE_SET_ACTIVE,
+    key: key,
+  };
+}
+
+//onSetSubjectAll
+function onSetKnowledgeNodeNull() {
+  return {
+    type: actionTypes.KNOWLEDGENODE_SET_NULL,
+  };
+}
+
 
 
 //searchKnowledgenodes
@@ -119,9 +134,63 @@ function searchResources(query) {
   };
 }
 
+
+
+//searchKnowledgeNodeResources
+function beforeSearchKnowledgeNodeResources(query) {
+  var type = actionTypes;
+  return {
+    type: actionTypes.BEFORE_SEARCH_KNOWLEDGENODE_RESOURCES,
+    key:query
+  };
+}
+
+function afterSearchKnowledgeNodeResources(json) {
+  return {
+    type: actionTypes.AFTER_SEARCH_KNOWLEDGENODE_RESOURCES,
+    result: json
+  };
+}
+
+function errorSearchKnowledgeNodeResources(error) {
+  return {
+    type: actionTypes.ERROR_SEARCH_KNOWLEDGENODE_RESOURCES,
+    error: error
+  };
+}
+
+function dispatchSearchKnowledgeNodeResourcesAsync(query) {
+  return (dispatch, getState) => {
+    return dispatch(searchKnowledgeNodeResources(query));
+  };
+}
+
+function searchKnowledgeNodeResources(query) {
+  return dispatch => {
+    dispatch(beforeSearchKnowledgeNodeResources());
+    return fetch(`${__RESOURCE_HOST}/search/knowledgeNodes/${query}`, {
+        method: 'get',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        }
+      })
+      .then(fetchHelper.checkStatus)
+      .then(fetchHelper.parseJSON)
+      .then(json => dispatch(afterSearchKnowledgeNodeResources(json)))
+      .catch(error => dispatch(errorSearchKnowledgeNodeResources(error)));
+  };
+}
+
 export default {
   onSetSubjectActive,
   onSetSubjectAll,
+
+  onSetKnowledgeNodeActive,
+  onSetKnowledgeNodeNull,
+
   dispatchSearchKnowledgenodesAsync,
   dispatchSearchResourcesAsync,
+
+  dispatchSearchKnowledgeNodeResourcesAsync,
 };

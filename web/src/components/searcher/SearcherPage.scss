@@ -42,11 +42,15 @@ $search-input-height: 50px;
 .resourceContainer {
   max-width: 600px;
   text-align: left;
+  border: 1em;
 }
 .resourceEach {
   padding: 15px;
   margin: 2px;
-  border-width: 1px 0 0 0;
+  border-width: 1px;
+  border-color: #f00;
+  border-style: dashed;
+  // border: 1px solid #f00;
 }
 .resourceEach:nth-child(1) {
   margin-top: 30px;
