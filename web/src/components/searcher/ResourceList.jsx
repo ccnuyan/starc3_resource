@@ -16,7 +16,8 @@ class ResourceList extends React.Component {
       : [];
 
     var createResourceRow = function(node) {
-      return <div className={classnames(css.resourceEach)} key={node._id}>{node.title}</div>;
+
+      return node.res_meta_type === 'link'?<a target="about:blank" href = {node.linkObject.uri} className={classnames(css.resourceEach)} key={node._id}>{node.title}</a>:<div className={classnames(css.resourceEach)} key={node._id}>{node.title}</div>;
     };
     return (
       <div className={classnames(css.resourceContainer, helpers['container-mid'])}>

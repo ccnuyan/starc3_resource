@@ -47,10 +47,8 @@ $search-input-height: 50px;
 .resourceEach {
   padding: 15px;
   margin: 2px;
-  border-width: 1px;
-  border-color: #f00;
-  border-style: dashed;
-  // border: 1px solid #f00;
+  cursor:pointer;
+  display: block;
 }
 .resourceEach:nth-child(1) {
   margin-top: 30px;

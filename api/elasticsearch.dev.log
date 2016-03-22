@@ -164945,3 +164945,4457 @@ DEBUG: 2016-03-22T02:39:09Z
 INFO: 2016-03-22T02:42:20Z
   Adding connection to http://119.97.166.135:9200/
 
+DEBUG: 2016-03-22T02:49:21Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+DEBUG: 2016-03-22T02:49:21Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T02:49:21Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "探索直线"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 14,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 6,
+      "max_score": 4.1643724,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fd",
+          "_score": 4.1643724
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fe",
+          "_score": 2.8252647
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b669061a",
+          "_score": 1.8144325
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690662",
+          "_score": 1.6174417
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b669064e",
+          "_score": 0.2711011
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905f8",
+          "_score": 0.22542298
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:49:21Z
+  Request complete
+
+TRACE: 2016-03-22T02:49:21Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "探索直线"
+            }
+          },
+          {
+            "match": {
+              "description": "探索直线"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "探索直线"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 18,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 28,
+      "max_score": 3.40572,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d36",
+          "_score": 3.40572
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3c",
+          "_score": 3.40572
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d37",
+          "_score": 3.2520072
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 3.2520072
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d35",
+          "_score": 3.249106
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3b",
+          "_score": 3.249106
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d33",
+          "_score": 2.970949
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d38",
+          "_score": 2.970949
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3e",
+          "_score": 2.970949
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d40",
+          "_score": 2.970949
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d34",
+          "_score": 2.8627162
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d39",
+          "_score": 2.8627162
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3a",
+          "_score": 2.8627162
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3f",
+          "_score": 2.8627162
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d43",
+          "_score": 1.8282505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d48",
+          "_score": 1.8282505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d44",
+          "_score": 1.7124054
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d49",
+          "_score": 1.7124054
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4a",
+          "_score": 1.7124054
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d42",
+          "_score": 1.7107898
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d47",
+          "_score": 1.7107898
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4d",
+          "_score": 1.7107898
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d45",
+          "_score": 1.6177064
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4b",
+          "_score": 1.6177064
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d41",
+          "_score": 1.5365319
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d46",
+          "_score": 1.5365319
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4c",
+          "_score": 1.5365319
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4f",
+          "_score": 0.12826695
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:49:21Z
+  Request complete
+
+DEBUG: 2016-03-22T02:49:35Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+DEBUG: 2016-03-22T02:49:35Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T02:49:35Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "平行线"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 9,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 5,
+      "max_score": 3.4011984,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fe",
+          "_score": 3.4011984
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fb",
+          "_score": 0.89246696
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905f8",
+          "_score": 0.40119088
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fd",
+          "_score": 0.38641447
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d27",
+          "_score": 0.30023837
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:49:35Z
+  Request complete
+
+TRACE: 2016-03-22T02:49:35Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "平行线"
+            }
+          },
+          {
+            "match": {
+              "description": "平行线"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "平行线"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 8,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 31,
+      "max_score": 3.1738803,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d43",
+          "_score": 3.1738803
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d48",
+          "_score": 3.1738803
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d45",
+          "_score": 3.069275
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4b",
+          "_score": 3.069275
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d44",
+          "_score": 2.9100285
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d49",
+          "_score": 2.9100285
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4a",
+          "_score": 2.9100285
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d42",
+          "_score": 2.907498
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d47",
+          "_score": 2.907498
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4d",
+          "_score": 2.907498
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d41",
+          "_score": 2.821465
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d46",
+          "_score": 2.821465
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4c",
+          "_score": 2.821465
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3b",
+          "_score": 1.7864466
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3c",
+          "_score": 1.6346412
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d40",
+          "_score": 1.609302
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 1.4848301
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d35",
+          "_score": 0.37096328
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d36",
+          "_score": 0.3127529
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d37",
+          "_score": 0.29293558
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d33",
+          "_score": 0.27673584
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d38",
+          "_score": 0.27673584
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3e",
+          "_score": 0.27673584
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d34",
+          "_score": 0.2628495
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d39",
+          "_score": 0.2628495
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3a",
+          "_score": 0.2628495
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3f",
+          "_score": 0.2628495
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d86",
+          "_score": 0.16690968
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fa5",
+          "_score": 0.13115534
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d88",
+          "_score": 0.12544882
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d87",
+          "_score": 0.1094086
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:49:35Z
+  Request complete
+
+DEBUG: 2016-03-22T02:49:46Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+DEBUG: 2016-03-22T02:49:46Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T02:49:46Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "认识三角形"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 17,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 28,
+      "max_score": 4.304163,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690600",
+          "_score": 4.304163
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d20",
+          "_score": 2.9718723
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690619",
+          "_score": 2.7138455
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b669063a",
+          "_score": 2.5012715
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690663",
+          "_score": 2.435561
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690668",
+          "_score": 2.435561
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d21",
+          "_score": 2.2877007
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b669061a",
+          "_score": 1.8092304
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b669061f",
+          "_score": 1.8092304
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690662",
+          "_score": 1.2744215
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:49:46Z
+  Request complete
+
+TRACE: 2016-03-22T02:49:46Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "认识三角形"
+            }
+          },
+          {
+            "match": {
+              "description": "认识三角形"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "认识三角形"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 22,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 171,
+      "max_score": 3.8130765,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5b",
+          "_score": 3.8130765
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d62",
+          "_score": 3.8130765
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d67",
+          "_score": 3.8130765
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6d",
+          "_score": 3.8130765
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d74",
+          "_score": 3.8130765
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d58",
+          "_score": 3.6223845
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5e",
+          "_score": 3.6223845
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d60",
+          "_score": 3.6223845
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d65",
+          "_score": 3.6223845
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6b",
+          "_score": 3.6223845
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d72",
+          "_score": 3.6223845
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d56",
+          "_score": 3.476373
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5c",
+          "_score": 3.476373
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d63",
+          "_score": 3.476373
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d68",
+          "_score": 3.476373
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6e",
+          "_score": 3.476373
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d70",
+          "_score": 3.476373
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d75",
+          "_score": 3.476373
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d59",
+          "_score": 3.441505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5a",
+          "_score": 3.441505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5f",
+          "_score": 3.441505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d61",
+          "_score": 3.441505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d66",
+          "_score": 3.441505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6c",
+          "_score": 3.441505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d73",
+          "_score": 3.441505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d57",
+          "_score": 3.3499022
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5d",
+          "_score": 3.3499022
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d64",
+          "_score": 3.3499022
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d69",
+          "_score": 3.3499022
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6a",
+          "_score": 3.3499022
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6f",
+          "_score": 3.3499022
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d71",
+          "_score": 3.3499022
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d76",
+          "_score": 3.3499022
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d81",
+          "_score": 1.6399479
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fac",
+          "_score": 1.5013062
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d83",
+          "_score": 1.3688612
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d79",
+          "_score": 1.3119583
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fab",
+          "_score": 1.3119583
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7b",
+          "_score": 1.2759095
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d54",
+          "_score": 1.2164495
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7f",
+          "_score": 1.2159232
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d82",
+          "_score": 1.201045
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d78",
+          "_score": 1.1647083
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7a",
+          "_score": 1.1479636
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7e",
+          "_score": 1.0857733
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d80",
+          "_score": 1.0857733
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d88",
+          "_score": 1.0266459
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6faa",
+          "_score": 1.0191197
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d87",
+          "_score": 0.79930806
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d93",
+          "_score": 0.12765579
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d92",
+          "_score": 0.12512237
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d99",
+          "_score": 0.12289357
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d37",
+          "_score": 0.10014666
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 0.08764061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d9e",
+          "_score": 0.06579426
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6da3",
+          "_score": 0.06579426
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6da8",
+          "_score": 0.06579426
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dae",
+          "_score": 0.06579426
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6db0",
+          "_score": 0.06579426
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6db5",
+          "_score": 0.06579426
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d85",
+          "_score": 0.06382105
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d9c",
+          "_score": 0.063778915
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6da1",
+          "_score": 0.063778915
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6da6",
+          "_score": 0.063778915
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dac",
+          "_score": 0.063778915
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6db3",
+          "_score": 0.063778915
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6db8",
+          "_score": 0.063778915
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8a",
+          "_score": 0.062724486
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d86",
+          "_score": 0.061555807
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8c",
+          "_score": 0.061555807
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d98",
+          "_score": 0.061555807
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d77",
+          "_score": 0.05990194
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7d",
+          "_score": 0.05990194
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d84",
+          "_score": 0.05990194
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d89",
+          "_score": 0.05990194
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8f",
+          "_score": 0.05990194
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d91",
+          "_score": 0.05990194
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d96",
+          "_score": 0.05990194
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7c",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8e",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d90",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d95",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d9b",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6da0",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6da5",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dab",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6db2",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6db7",
+          "_score": 0.059877113
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8d",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d94",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d9a",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d9f",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6da4",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6da9",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6daa",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6daf",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6db1",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6db6",
+          "_score": 0.059828702
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8b",
+          "_score": 0.059730396
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d97",
+          "_score": 0.059730396
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:49:46Z
+  Request complete
+
+DEBUG: 2016-03-22T02:50:00Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+DEBUG: 2016-03-22T02:50:00Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T02:50:00Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "多边形的内角"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 11,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 15,
+      "max_score": 3.7931848,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690601",
+          "_score": 3.7931848
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b669064f",
+          "_score": 2.4261467
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d20",
+          "_score": 0.15874538
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690600",
+          "_score": 0.1423072
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690639",
+          "_score": 0.1414846
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690619",
+          "_score": 0.12805235
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690638",
+          "_score": 0.12805235
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690663",
+          "_score": 0.12711567
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690668",
+          "_score": 0.12711567
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d27",
+          "_score": 0.12711567
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:50:00Z
+  Request complete
+
+TRACE: 2016-03-22T02:50:00Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "多边形的内角"
+            }
+          },
+          {
+            "match": {
+              "description": "多边形的内角"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "多边形的内角"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 13,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 84,
+      "max_score": 2.6824827,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7c",
+          "_score": 2.6824827
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d83",
+          "_score": 2.6824827
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d88",
+          "_score": 2.6824827
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8e",
+          "_score": 2.6824827
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d90",
+          "_score": 2.6824827
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d95",
+          "_score": 2.6824827
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7b",
+          "_score": 2.5714998
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d82",
+          "_score": 2.5714998
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d87",
+          "_score": 2.5714998
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8d",
+          "_score": 2.5714998
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d94",
+          "_score": 2.5714998
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d99",
+          "_score": 2.5714998
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d9a",
+          "_score": 2.5714998
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d78",
+          "_score": 2.5687385
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7e",
+          "_score": 2.5687385
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d80",
+          "_score": 2.5687385
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d85",
+          "_score": 2.5687385
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8b",
+          "_score": 2.5687385
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d92",
+          "_score": 2.5687385
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d97",
+          "_score": 2.5687385
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d79",
+          "_score": 2.4918826
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7a",
+          "_score": 2.4918826
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7f",
+          "_score": 2.4918826
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d81",
+          "_score": 2.4918826
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d86",
+          "_score": 2.4918826
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8c",
+          "_score": 2.4918826
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d93",
+          "_score": 2.4918826
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d98",
+          "_score": 2.4918826
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d77",
+          "_score": 2.4810941
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d7d",
+          "_score": 2.4810941
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d84",
+          "_score": 2.4810941
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d89",
+          "_score": 2.4810941
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8a",
+          "_score": 2.4810941
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d8f",
+          "_score": 2.4810941
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d91",
+          "_score": 2.4810941
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d96",
+          "_score": 2.4810941
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fac",
+          "_score": 0.53823125
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6faa",
+          "_score": 0.34429783
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d33",
+          "_score": 0.15870498
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d34",
+          "_score": 0.14671311
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5b",
+          "_score": 0.13512112
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d62",
+          "_score": 0.13512112
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d67",
+          "_score": 0.13512112
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6d",
+          "_score": 0.13512112
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d74",
+          "_score": 0.13512112
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d58",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5e",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d60",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d65",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6b",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d72",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d57",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5d",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d64",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d69",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6a",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6f",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d71",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d76",
+          "_score": 0.13138515
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d56",
+          "_score": 0.13122156
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5c",
+          "_score": 0.13122156
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d63",
+          "_score": 0.13122156
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d68",
+          "_score": 0.13122156
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6e",
+          "_score": 0.13122156
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d70",
+          "_score": 0.13122156
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d75",
+          "_score": 0.13122156
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d59",
+          "_score": 0.13105734
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5a",
+          "_score": 0.13105734
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d5f",
+          "_score": 0.13105734
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d61",
+          "_score": 0.13105734
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d66",
+          "_score": 0.13105734
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d6c",
+          "_score": 0.13105734
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d73",
+          "_score": 0.13105734
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d38",
+          "_score": 0.12696399
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3b",
+          "_score": 0.12672518
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d47",
+          "_score": 0.08752054
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6ef4",
+          "_score": 0.07150892
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fab",
+          "_score": 0.07150892
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6e19",
+          "_score": 0.068701684
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6ef5",
+          "_score": 0.068701684
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6e18",
+          "_score": 0.0625703
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d54",
+          "_score": 0.061264373
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fa5",
+          "_score": 0.053631693
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 0.051526263
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:50:00Z
+  Request complete
+
+DEBUG: 2016-03-22T02:50:35Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+DEBUG: 2016-03-22T02:50:35Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T02:50:35Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "同底数"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 6,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 2,
+      "max_score": 3.836368,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690604",
+          "_score": 3.836368
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b6690602",
+          "_score": 3.0227065
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:50:35Z
+  Request complete
+
+TRACE: 2016-03-22T02:50:35Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "同底数"
+            }
+          },
+          {
+            "match": {
+              "description": "同底数"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "同底数"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 11,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 30,
+      "max_score": 3.319739,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dd6",
+          "_score": 3.319739
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6ddc",
+          "_score": 3.319739
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dd5",
+          "_score": 3.316971
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6ddb",
+          "_score": 3.316971
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dbd",
+          "_score": 3.1188393
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dd2",
+          "_score": 2.8728673
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dd7",
+          "_score": 2.8728673
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6ddd",
+          "_score": 2.8728673
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dd4",
+          "_score": 2.7061067
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dd9",
+          "_score": 2.7061067
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dda",
+          "_score": 2.7061067
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6ddf",
+          "_score": 2.7061067
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6de1",
+          "_score": 2.7061067
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dd3",
+          "_score": 2.7061067
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dd8",
+          "_score": 2.7061067
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dde",
+          "_score": 2.7061067
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6de0",
+          "_score": 2.7061067
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dbc",
+          "_score": 2.4877284
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dbe",
+          "_score": 2.1546504
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dc0",
+          "_score": 2.1546504
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dbb",
+          "_score": 2.02958
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dbf",
+          "_score": 2.02958
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dc1",
+          "_score": 2.02958
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dc7",
+          "_score": 1.6787738
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6dc6",
+          "_score": 1.3406487
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6eaa",
+          "_score": 0.4788031
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6e92",
+          "_score": 0.42366344
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6ea7",
+          "_score": 0.2965644
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6eab",
+          "_score": 0.28753892
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6eb6",
+          "_score": 0.28728187
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T02:50:35Z
+  Request complete
+
+DEBUG: 2016-03-22T03:02:25Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+DEBUG: 2016-03-22T03:02:25Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T03:02:25Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "平行"
+            }
+          },
+          {
+            "match": {
+              "description": "平行"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 22,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 28,
+      "max_score": 1.6251116,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d36",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3c",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d43",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d48",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d41",
+          "_score": 1.5934405
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d37",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d44",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d49",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4a",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d35",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3b",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d42",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d47",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4d",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d45",
+          "_score": 1.4576018
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d33",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d38",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3e",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d40",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4b",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d34",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d39",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3a",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3f",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d46",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4c",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fa5",
+          "_score": 0.68150306
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:02:25Z
+  Request complete
+
+TRACE: 2016-03-22T03:02:25Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 25,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 4,
+      "max_score": 4.897924,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fb",
+          "_score": 4.897924
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fd",
+          "_score": 2.025226
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fe",
+          "_score": 1.9173453
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d27",
+          "_score": 1.5977877
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:02:25Z
+  Request complete
+
+DEBUG: 2016-03-22T03:02:42Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+DEBUG: 2016-03-22T03:02:42Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T03:02:53Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "直线平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 7,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 6,
+      "max_score": 2.8235228,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fd",
+          "_score": 2.8235228
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fb",
+          "_score": 1.5329837
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b669064e",
+          "_score": 0.799686
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905f8",
+          "_score": 0.7635909
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fe",
+          "_score": 0.6857363
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d27",
+          "_score": 0.57144696
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:02:53Z
+  Request complete
+
+TRACE: 2016-03-22T03:02:53Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "直线平行"
+            }
+          },
+          {
+            "match": {
+              "description": "直线平行"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "直线平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 11,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 28,
+      "max_score": 2.5181608,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d36",
+          "_score": 2.5181608
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3c",
+          "_score": 2.5181608
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d37",
+          "_score": 2.4464045
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 2.4464045
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d35",
+          "_score": 2.4443321
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3b",
+          "_score": 2.4443321
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d33",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d38",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3e",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d40",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d34",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d39",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3a",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3f",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d43",
+          "_score": 1.90242
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d48",
+          "_score": 0.57456374
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d41",
+          "_score": 0.5633663
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d44",
+          "_score": 0.53815705
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d49",
+          "_score": 0.53815705
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4a",
+          "_score": 0.53815705
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d42",
+          "_score": 0.5376494
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d47",
+          "_score": 0.5376494
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4d",
+          "_score": 0.5376494
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d45",
+          "_score": 0.5153401
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4b",
+          "_score": 0.50839615
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d46",
+          "_score": 0.48288542
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4c",
+          "_score": 0.48288542
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fa5",
+          "_score": 0.24094772
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:02:53Z
+  Request complete
+
+DEBUG: 2016-03-22T03:02:53Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T03:02:53Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "直线平行"
+            }
+          },
+          {
+            "match": {
+              "description": "直线平行"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "直线平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 6,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 28,
+      "max_score": 2.5181608,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d36",
+          "_score": 2.5181608
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3c",
+          "_score": 2.5181608
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d37",
+          "_score": 2.4464045
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 2.4464045
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d35",
+          "_score": 2.4443321
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3b",
+          "_score": 2.4443321
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d33",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d38",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3e",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d40",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d34",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d39",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3a",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3f",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d43",
+          "_score": 1.90242
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d48",
+          "_score": 0.57456374
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d41",
+          "_score": 0.5633663
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d44",
+          "_score": 0.53815705
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d49",
+          "_score": 0.53815705
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4a",
+          "_score": 0.53815705
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d42",
+          "_score": 0.5376494
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d47",
+          "_score": 0.5376494
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4d",
+          "_score": 0.5376494
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d45",
+          "_score": 0.5153401
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4b",
+          "_score": 0.50839615
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d46",
+          "_score": 0.48288542
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4c",
+          "_score": 0.48288542
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fa5",
+          "_score": 0.24094772
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:02:53Z
+  Request complete
+
+DEBUG: 2016-03-22T03:02:54Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T03:02:54Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "直线平行"
+            }
+          },
+          {
+            "match": {
+              "description": "直线平行"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "直线平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 16,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 28,
+      "max_score": 2.5181608,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d36",
+          "_score": 2.5181608
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3c",
+          "_score": 2.5181608
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d37",
+          "_score": 2.4464045
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 2.4464045
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d35",
+          "_score": 2.4443321
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3b",
+          "_score": 2.4443321
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d33",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d38",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3e",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d40",
+          "_score": 2.167972
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d34",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d39",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3a",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3f",
+          "_score": 2.1169505
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d43",
+          "_score": 1.90242
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d48",
+          "_score": 0.57456374
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d41",
+          "_score": 0.5633663
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d44",
+          "_score": 0.53815705
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d49",
+          "_score": 0.53815705
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4a",
+          "_score": 0.53815705
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d42",
+          "_score": 0.5376494
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d47",
+          "_score": 0.5376494
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4d",
+          "_score": 0.5376494
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d45",
+          "_score": 0.5153401
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4b",
+          "_score": 0.50839615
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d46",
+          "_score": 0.48288542
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4c",
+          "_score": 0.48288542
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fa5",
+          "_score": 0.24094772
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:02:54Z
+  Request complete
+
+DEBUG: 2016-03-22T03:02:54Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T03:02:54Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "直线平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 8,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 6,
+      "max_score": 2.8235228,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fd",
+          "_score": 2.8235228
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fb",
+          "_score": 1.5329837
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b669064e",
+          "_score": 0.799686
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905f8",
+          "_score": 0.7635909
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fe",
+          "_score": 0.6857363
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d27",
+          "_score": 0.57144696
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:02:54Z
+  Request complete
+
+DEBUG: 2016-03-22T03:02:54Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T03:02:54Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "直线平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 13,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 6,
+      "max_score": 2.8235228,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fd",
+          "_score": 2.8235228
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fb",
+          "_score": 1.5329837
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b669064e",
+          "_score": 0.799686
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905f8",
+          "_score": 0.7635909
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fe",
+          "_score": 0.6857363
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d27",
+          "_score": 0.57144696
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:02:54Z
+  Request complete
+
+DEBUG: 2016-03-22T03:06:22Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+DEBUG: 2016-03-22T03:06:22Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T03:06:22Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "平行"
+            }
+          },
+          {
+            "match": {
+              "description": "平行"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 11,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 28,
+      "max_score": 1.6251116,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d36",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3c",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d43",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d48",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d41",
+          "_score": 1.5934405
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d37",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d44",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d49",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4a",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d35",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3b",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d42",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d47",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4d",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d45",
+          "_score": 1.4576018
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d33",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d38",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3e",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d40",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4b",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d34",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d39",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3a",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3f",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d46",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4c",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fa5",
+          "_score": 0.68150306
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:06:22Z
+  Request complete
+
+TRACE: 2016-03-22T03:06:22Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 9,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 4,
+      "max_score": 4.897924,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fb",
+          "_score": 4.897924
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fd",
+          "_score": 2.025226
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fe",
+          "_score": 1.9173453
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d27",
+          "_score": 1.5977877
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:06:22Z
+  Request complete
+
+DEBUG: 2016-03-22T03:10:12Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/knowledgeNodes/_search',
+    body: 
+     { size: 10,
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+DEBUG: 2016-03-22T03:10:12Z
+  starting request { method: 'POST',
+    path: '/starc3_resource/resources/_search',
+    body: 
+     { sort: [ '_score' ],
+       from: 0,
+       size: '100',
+       fields: [],
+       query: { dis_max: [Object] },
+       filter: { and: [Object] } },
+    query: {} }
+  
+
+TRACE: 2016-03-22T03:10:12Z
+  -> POST http://119.97.166.135:9200/starc3_resource/knowledgeNodes/_search
+  {
+    "size": 10,
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subject": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 6,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 4,
+      "max_score": 4.897924,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fb",
+          "_score": 4.897924
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fd",
+          "_score": 2.025226
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56e7bbd5ca1fea20b66905fe",
+          "_score": 1.9173453
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "knowledgeNodes",
+          "_id": "56ea6bc5c03020d2114d6d27",
+          "_score": 1.5977877
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:10:12Z
+  Request complete
+
+TRACE: 2016-03-22T03:10:12Z
+  -> POST http://119.97.166.135:9200/starc3_resource/resources/_search
+  {
+    "sort": [
+      "_score"
+    ],
+    "from": 0,
+    "size": "100",
+    "fields": [],
+    "query": {
+      "dis_max": {
+        "queries": [
+          {
+            "match": {
+              "title": "平行"
+            }
+          },
+          {
+            "match": {
+              "description": "平行"
+            }
+          },
+          {
+            "match": {
+              "knowledgeNode": "平行"
+            }
+          }
+        ]
+      }
+    },
+    "filter": {
+      "and": [
+        {
+          "term": {
+            "subjectId": "mjsk"
+          }
+        }
+      ]
+    }
+  }
+  <- 200
+  {
+    "took": 6,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 28,
+      "max_score": 1.6251116,
+      "hits": [
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d36",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3c",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d43",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d48",
+          "_score": 1.6251116
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d41",
+          "_score": 1.5934405
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d37",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3d",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d44",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d49",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4a",
+          "_score": 1.5221381
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d35",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3b",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d42",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d47",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4d",
+          "_score": 1.5207021
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d45",
+          "_score": 1.4576018
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d33",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d38",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3e",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d40",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4b",
+          "_score": 1.4379613
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d34",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d39",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3a",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d3f",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d46",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6d4c",
+          "_score": 1.3658061
+        },
+        {
+          "_index": "starc3_resource",
+          "_type": "resources",
+          "_id": "56ea7148c03020d2114d6fa5",
+          "_score": 0.68150306
+        }
+      ]
+    }
+  }
+
+DEBUG: 2016-03-22T03:10:12Z
+  Request complete
+

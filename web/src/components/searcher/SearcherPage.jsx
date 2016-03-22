@@ -113,6 +113,9 @@ class SearcherPage extends React.Component {
                 <button onClick={this.setSubjectAll} className={classnames(helpers['errorButton'], css.subjectButton, helpers['font-smallest'])}>清除选择</button>
               </div>
             : ''}
+          <div>
+            <KnowledgeNodeList onKnowledgeSearch={this.goSearchKnowledgeNode}></KnowledgeNodeList>
+          </div>
           <div style={{
             margin: 20
           }}>
@@ -125,7 +128,6 @@ class SearcherPage extends React.Component {
             </button>
           </div>
           <div>
-            <KnowledgeNodeList onKnowledgeSearch={this.goSearchKnowledgeNode}></KnowledgeNodeList>
             <ResourceList></ResourceList>
           </div>
         </div>
