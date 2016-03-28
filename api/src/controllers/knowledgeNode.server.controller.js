@@ -4,6 +4,7 @@ var User = mongoose.model('User');
 var Resource = mongoose.model('Resource');
 var KnowledgeNode = mongoose.model('KnowledgeNode');
 var client = require('../services/elasticSearchService.js').getClient();
+var _ = require('lodash');
 
 
 exports.search = function(req, res, next) {
@@ -57,13 +58,12 @@ exports.search = function(req, res, next) {
     response.hits.hits.forEach(function(hit) {
       ids.push(hit._id);
     });
-
     if (response && !response.timeout) {
       KnowledgeNode.find({
           _id: {
             $in: ids
           }
-        })
+        },null,{lean:true})
         .exec(function(err, nodes) {
           if (err) {
             return next(err);
@@ -73,11 +73,12 @@ exports.search = function(req, res, next) {
           ids.forEach(function(id) {
             nodes.forEach(function(node) {
               if (node._id.toString() === id.toString()) {
+                var esNode = _.find(response.hits.hits,{_id:id});
+                node.score = esNode._score;
                 orderdNodes.push(node);
               }
             });
           });
-
           return res.status(200).json(orderdNodes);
         });
     }
@@ -123,7 +124,6 @@ exports.knowledegeNodeResources = function(req, res, next) {
       if (err) {
         return next(err);
       }
-      console.log(knowledgeNode);
       Resource.find({
           knowledgeNode: knowledgeNode._id
         }, null, {

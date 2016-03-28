@@ -4,6 +4,7 @@ var FileObject = mongoose.model('FileObject');
 var RemovedFileObject = mongoose.model('RemovedFileObject');
 var Resource = mongoose.model('Resource');
 
+var _ = require('lodash');
 var client = require('../services/elasticSearchService.js').getClient();
 
 var Excel = require('exceljs');
@@ -104,9 +105,9 @@ exports.search = function(req, res, next) {
           _id: {
             $in: ids
           }
-        })
+        },null,{lean:true})
         .populate('knowledgeNode')
-        // .populate('fileObject')
+        .populate('fileObject')
         .sort({
           approved: 'desc'
         })
@@ -119,6 +120,8 @@ exports.search = function(req, res, next) {
           ids.forEach(function(id) {
             resources.forEach(function(node) {
               if (node._id.toString() === id.toString()) {
+                var esNode = _.find(response.hits.hits,{_id:id});
+                node.score = esNode._score;
                 orderdResources.push(node);
               }
             });

@@ -23,9 +23,11 @@ class KnowledgeNodeList extends React.Component {
 
     var knowledgeNodes = this.props.searcher.get('knowledgeNodes');
     var activeKnowledgeNodeId = this.props.searcher.getIn(['activeKnowledgeNode', '_id']);
-    var nodes = knowledgeNodes.size !== 0
+    var nds = knowledgeNodes.size !== 0
       ? Object.keys(knowledgeNodes.toObject()).map(key => knowledgeNodes.toObject()[key].toObject())
       : [];
+
+    var nodes = _.sortBy(nds,['score']).reverse();
 
     var createKnowledgeNodeRow = function(node) {
       return <button data-key={node._id} onClick={this.onSearch} className={classnames(helpers[node._id === activeKnowledgeNodeId

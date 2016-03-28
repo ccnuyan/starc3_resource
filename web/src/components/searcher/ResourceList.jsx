@@ -11,9 +11,12 @@ class ResourceList extends React.Component {
     var css = this.props.css;
 
     var resources = this.props.searcher.get('resources');
-    var rs = resources.size !== 0
+    var urs = resources.size !== 0
       ? Object.keys(resources.toObject()).map(key => resources.toObject()[key].toObject())
       : [];
+
+
+    var rs = _.sortBy(urs,['score']).reverse();
 
     var createResourceRow = function(node) {
 
