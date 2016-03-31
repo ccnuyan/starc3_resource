@@ -209,6 +209,7 @@ a.button {
 .button:active {
   opacity: 0.6;
   background-color: $defaultLight;
+  color:#000;
   transition: all 0ms;
 }
 .button-hollow {

@@ -17,6 +17,7 @@ class SearcherPage extends React.Component {
     this.setSubjectActive = this.setSubjectActive.bind(this);
     this.setSubjectAll = this.setSubjectAll.bind(this);
     this.goSearchKnowledgeNode = this.goSearchKnowledgeNode.bind(this);
+    this.onKeyPress = this.onKeyPress.bind(this);
   }
 
   componentDidMount() {
@@ -32,6 +33,12 @@ class SearcherPage extends React.Component {
     seacherActions.dispatchSearchKnowledgeNodeResourcesAsync(knowledgeNodeId)(this.props.dispatch, function() {
       return this.props.searcher;
     }.bind(this));
+  }
+
+  onKeyPress(event){
+    if(event.charCode === 13){
+      this.goSearch();
+    }
   }
 
   goSearch() {
@@ -102,7 +109,7 @@ class SearcherPage extends React.Component {
               ? activeSubject.toObject().name + '资源搜索'
               : '资源搜索'}</h1>
         </div>
-        <div className={classnames(helpers['center'])}>
+        <div className={classnames(helpers['center'])}  onKeyPress={this.onKeyPress}>
           {!(activeSubject && activeSubject.toObject().type === 'standalone')
             ? <div>
                 {subjectTobeDiskplayed.map(function(sbj) {
@@ -116,13 +123,8 @@ class SearcherPage extends React.Component {
           <div>
             <KnowledgeNodeList onKnowledgeSearch={this.goSearchKnowledgeNode}></KnowledgeNodeList>
           </div>
-          <div style={{
-            margin: 20
-          }}>
-            <input style={{
-              margin: 5,
-              paddingLeft: 15
-            }} ref="searchInput" className={classnames(css.searchInput)} type="text"/>
+          <div className={classnames(css.searcher, helpers['container-mid'])}>
+            <input ref="searchInput" className={classnames(css.searchInput)} type="text"/>
             <button onClick={this.goSearch} className={classnames(css.searchButton, helpers['button'])}>
               <i className="fa fa-search"></i>
             </button>

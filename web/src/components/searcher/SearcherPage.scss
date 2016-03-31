@@ -24,17 +24,26 @@ $search-input-height: 50px;
   opacity: 0.8;
   font-size: 80%;
 }
+.searcher {
+  max-width: 600px;
+  text-align: left;
+  border: 1em;
+  padding: 20px;
+}
 .searchInput {
-  width: 60%;
-  min-width: 400px;
+  width: 80%;
+  display: inline-block;
+  padding-left: 15px;
+}
+.searchInput {
   height: $search-input-height;
 }
 .searchButton {
-  width: 80px;
+   width: 20%;
   height: $search-input-height;
 }
 .subjectButton {
-  margin: 5px;
+  margin: 5px 0;
 }
 .knowledgeButton {
   margin: 5px;
@@ -43,12 +52,16 @@ $search-input-height: 50px;
   max-width: 600px;
   text-align: left;
   border: 1em;
+  margin-bottom:30px
 }
 .resourceEach {
   padding: 15px;
   margin: 2px;
-  cursor:pointer;
+  cursor: pointer;
   display: block;
+  border-style: solid;
+  border-color: #555;
+  border-width: 0 0 1px 0;
 }
 .resourceEach:nth-child(1) {
   margin-top: 30px;

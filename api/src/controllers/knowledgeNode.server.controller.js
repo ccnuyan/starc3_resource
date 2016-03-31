@@ -114,8 +114,6 @@ exports.read = function(req, res, next) {
     });
 };
 
-
-
 exports.knowledegeNodeResources = function(req, res, next) {
   KnowledgeNode.findById(req.knowledgeNode.id, null, {
       lean: true
@@ -129,6 +127,7 @@ exports.knowledegeNodeResources = function(req, res, next) {
         }, null, {
           lean: true
         })
+        .populate('knowledgeNode')
         .exec(function(err, resources) {
           if (err) {
             return next(err);

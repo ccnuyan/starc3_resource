@@ -35,7 +35,7 @@ class KnowledgeNodeList extends React.Component {
           : 'button-hollow'], helpers['font-smallest'], css.knowledgeButton)} key={node._id}>{node.title}</button>;
     }.bind(this);
     return (
-      <div>
+      <div className={classnames(css.resourceContainer, helpers['container-mid'])}>
         {nodes.map(createKnowledgeNodeRow)}
       </div>
     );

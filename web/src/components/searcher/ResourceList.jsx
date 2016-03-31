@@ -15,12 +15,18 @@ class ResourceList extends React.Component {
       ? Object.keys(resources.toObject()).map(key => resources.toObject()[key].toObject())
       : [];
 
-
-    var rs = _.sortBy(urs,['score']).reverse();
+    var rs = _.sortBy(urs, ['score']).reverse();
 
     var createResourceRow = function(node) {
 
-      return node.res_meta_type === 'link'?<a target="about:blank" href = {node.linkObject.uri} className={classnames(css.resourceEach)} key={node._id}>{node.title}</a>:<div className={classnames(css.resourceEach)} key={node._id}>{node.title}</div>;
+      return node.res_meta_type === 'link'
+        ? <div className={classnames(css.resourceEach)}>
+            <div className={classnames(css.resourceEachTitle, helpers['font-smaller'])}>
+              知识点：{node.knowledgeNode.title}
+            </div>
+            <a target="about:blank" href={node.linkObject.uri} key={node._id}>{node.title}</a>
+          </div>
+        : <div className={classnames(css.resourceEach)} key={node._id}>{node.title}</div>;
     };
     return (
       <div className={classnames(css.resourceContainer, helpers['container-mid'])}>
